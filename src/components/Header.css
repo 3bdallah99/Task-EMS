@@ -212,11 +212,11 @@
     }
 
     .nav-item {
-        padding: 6px;
+        padding: 6px 8px;
     }
 
     .header-nav {
-        gap: 1px;
+        gap: 4px;
     }
 
     .station-name {

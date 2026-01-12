@@ -389,24 +389,29 @@
 /* ===== RESPONSIVE SUBHEADER ADJUSTMENTS ===== */
 @media screen and (max-width: 1280px) {
     .subheader-bar {
-        padding: 10px 400px;
+        padding: 10px 420px;
     }
 }
 
 @media screen and (max-width: 1024px) {
     .subheader-bar {
-        padding: 10px 350px;
+        padding: 10px 380px;
     }
 
     .date-time-box,
     .actions-box {
         transform: scale(0.85);
     }
+
+    .mic-btn {
+        display: none;
+        /* Hide mic button to prevent overlap */
+    }
 }
 
 @media screen and (max-width: 850px) {
     .subheader-bar {
-        padding: 10px 280px;
+        padding: 10px 320px;
     }
 
     .date-time-box,

@@ -18,39 +18,70 @@
   --panel-width: 300px;
 }
 
+/* ===== RESPONSIVE ZOOM SCALING ===== */
+/* With clamp() fonts, zoom handles layout scaling while fonts auto-adjust */
+
+@media screen and (max-width: 1440px) {
+  .dashboard-wrapper {
+    zoom: 0.85;
+    /* Slight scale for smaller desktops */
+  }
+}
+
 @media screen and (max-width: 1280px) {
   .dashboard-wrapper {
-    zoom: 0.75;
-    /* Smart Scale for Tablets/Small Laptops */
+    zoom: 0.72;
+    /* Smart Scale for Small Laptops */
   }
 }
 
 @media screen and (max-width: 1024px) {
   .dashboard-wrapper:not(:has(.rotate-overlay[style*="display: flex"])) {
-    zoom: 0.6;
-    /* Scale for smaller tablets */
+    zoom: 0.58;
+    /* Scale for Tablets */
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .dashboard-wrapper:not(:has(.rotate-overlay[style*="display: flex"])) {
+    zoom: 0.48;
+    /* Scale for small tablets */
   }
 }
 
 @media screen and (max-width: 768px) {
   .dashboard-wrapper:not(:has(.rotate-overlay[style*="display: flex"])) {
-    zoom: 0.45;
+    zoom: 0.42;
     /* Scale for large phones */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .dashboard-wrapper:not(:has(.rotate-overlay[style*="display: flex"])) {
+    zoom: 0.36;
+    /* Scale for medium phones */
   }
 }
 
 @media screen and (max-width: 480px) {
   .dashboard-wrapper:not(:has(.rotate-overlay[style*="display: flex"])) {
-    zoom: 0.35;
+    zoom: 0.32;
     /* Scale for small phones */
   }
 }
 
-/* Landscape mode on phones - extra small to prevent crowding */
-@media screen and (max-height: 500px) and (orientation: landscape) {
+@media screen and (max-width: 400px) {
   .dashboard-wrapper:not(:has(.rotate-overlay[style*="display: flex"])) {
     zoom: 0.28;
-    /* Extra small for landscape phones */
+    /* Scale for very small phones */
+  }
+}
+
+/* Landscape mode on phones - adjusted for readability */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .dashboard-wrapper:not(:has(.rotate-overlay[style*="display: flex"])) {
+    zoom: 0.55;
+    /* Better readable zoom for landscape phones */
   }
 }
 

@@ -1,17 +1,17 @@
 import './BottomPanel.css';
-import { FileText, BarChart3, PieChart, Banknote, TrendingUp, TrendingDown } from 'lucide-react';
+import { Banknote, TrendingUp, TrendingDown } from 'lucide-react';
 
 const BottomPanel = () => {
     return (
         <section className="bottom-panel">
-            {/* Station Invoice Card */}
-            {/* Station Invoice Card - Split Layout */}
+
+
             <div className="bottom-card">
                 <div className="card-header">
                     <span>Station Invoice</span>
                 </div>
                 <div className="card-content invoice split-content">
-                    {/* Left Side: Day */}
+
                     <div className="invoice-half">
                         <div className="inner-invoice-card">
                             <span className="sub-label">Invoice / Day</span>
@@ -27,10 +27,10 @@ const BottomPanel = () => {
                         </div>
                     </div>
 
-                    {/* Divider */}
+
                     <div className="invoice-divider"></div>
 
-                    {/* Right Side: Month */}
+
                     <div className="invoice-half">
                         <div className="inner-invoice-card">
                             <span className="sub-label">Invoice / Month</span>
@@ -51,7 +51,7 @@ const BottomPanel = () => {
                 </p>
             </div>
 
-            {/* Daily Consumption Monitor Card */}
+
             <div className="bottom-card wide">
                 <div className="card-header">
                     <span>Daily Consumption Monitor</span>
@@ -69,7 +69,7 @@ const BottomPanel = () => {
                     </div>
 
                     <div className="line-chart-container" style={{ height: '100%', width: '100%', position: 'relative' }}>
-                        {/* Simulated Line Chart */}
+
                         <svg width="100%" height="100%" viewBox="0 0 320 100" style={{ overflow: 'visible' }}>
                             <defs>
                                 <linearGradient id="lineGradient" x1="0" y1="0" x2="0" y2="1">
@@ -78,7 +78,7 @@ const BottomPanel = () => {
                                 </linearGradient>
                             </defs>
 
-                            {/* Y-Axis Labels - Lifted & Shifted Left */}
+
                             <text x="0" y="70" fill="#ffffff" fontSize="5" textAnchor="start">0</text>
                             <text x="0" y="58" fill="#ffffff" fontSize="5" textAnchor="start">2K</text>
                             <text x="0" y="46" fill="#ffffff" fontSize="5" textAnchor="start">4K</text>
@@ -86,17 +86,17 @@ const BottomPanel = () => {
                             <text x="0" y="22" fill="#ffffff" fontSize="5" textAnchor="start">8K</text>
                             <text x="0" y="10" fill="#ffffff" fontSize="5" textAnchor="start">10K</text>
 
-                            {/* Axes Lines - Lifted & Shifted Left */}
-                            {/* Y-Axis */}
+
+
                             <line x1="12" y1="5" x2="12" y2="70" stroke="rgba(255,255,255,0.3)" strokeWidth="1" />
-                            {/* X-Axis */}
+
                             <line x1="12" y1="70" x2="320" y2="70" stroke="rgba(255,255,255,0.3)" strokeWidth="1" />
 
-                            {/* Chart Line - Lifted & Smoothed & Shifted Left */}
+
                             <path d="M12,58 C40,58 50,35 70,35 S100,55 120,55 S150,20 170,20 S200,50 220,50 S250,15 270,15 S310,40 320,40"
                                 fill="none" stroke="#00d4ff" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
 
-                            {/* Time Labels (Lifted & Shifted Left) */}
+
                             <text x="12" y="82" fill="#ffffff" fontSize="5" fontWeight="500" textAnchor="start">07:30</text>
                             <text x="62" y="82" fill="#ffffff" fontSize="5" fontWeight="500" textAnchor="middle">07:31</text>
                             <text x="112" y="82" fill="#ffffff" fontSize="5" fontWeight="500" textAnchor="middle">08:23</text>
@@ -109,7 +109,7 @@ const BottomPanel = () => {
                 </div>
             </div>
 
-            {/* Station Performance & KPI Card */}
+
             <div className="bottom-card">
                 <div className="card-header">
                     <span>Station Performance & KPI</span>

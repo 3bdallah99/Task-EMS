@@ -60,9 +60,9 @@ const Header = () => {
 
     return (
         <header className="header">
-            {/* Main Header Row */}
+
             <div className="header-row">
-                {/* Left Logo - EMS */}
+
                 <div className="header-logo header-logo-left">
                     <div className="ems-logo">
                         <svg width="32" height="32" viewBox="0 0 50 50" className="ems-logo-svg">
@@ -91,9 +91,9 @@ const Header = () => {
                     </div>
                 </div>
 
-                {/* Navigation + Center Title + Notch Container */}
+
                 <div className="header-nav-container">
-                    {/* Left Navigation (4 icons) */}
+
                     <nav className="header-nav header-nav-left">
                         {navItemsLeft.map((item) => (
                             <button
@@ -107,16 +107,16 @@ const Header = () => {
                         ))}
                     </nav>
 
-                    {/* Center Notch with Station Info inside */}
+
                     <div className="notch-wrapper">
-                        {/* Station Info inside the notch */}
+
                         <div className="station-info">
                             <span className="station-name">AL - Choueifat</span>
                             <span className="station-subtitle">Sewage Lifting Station</span>
                         </div>
                     </div>
 
-                    {/* Right Navigation (4 icons) */}
+
                     <nav className="header-nav header-nav-right">
                         {navItemsRight.map((item) => (
                             <button
@@ -130,7 +130,7 @@ const Header = () => {
                         ))}
                     </nav>
 
-                    {/* SVG border from Home to Dashboard with fade */}
+
                     <svg className="header-border-svg" viewBox="0 0 1000 25" preserveAspectRatio="none">
                         <defs>
                             <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -154,7 +154,7 @@ const Header = () => {
                                 </feMerge>
                             </filter>
                         </defs>
-                        {/* Angular polygonal notch with fade at edges */}
+
                         <path
                             d="M 180 1 
                  L 420 1 
@@ -170,15 +170,15 @@ const Header = () => {
                     </svg>
                 </div>
 
-                {/* Right Logo - SIEMENS */}
+
                 <div className="header-logo header-logo-right">
                     <span className="siemens-text">SIEMENS</span>
                 </div>
             </div>
 
-            {/* Subheader Info Bar */}
+
             <div className="subheader-bar">
-                {/* Left - Date and Time */}
+
                 <div className="subheader-left">
                     <div className="date-time-box">
                         <span className="date-icon">☁</span>
@@ -188,7 +188,7 @@ const Header = () => {
                     </div>
                 </div>
 
-                {/* Right - Actions Card */}
+
                 <div className="subheader-right">
                     <div className="actions-box">
                         <Sun className="action-icon sun-icon" size={14} />

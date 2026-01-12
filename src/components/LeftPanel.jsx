@@ -1,18 +1,18 @@
 import './LeftPanel.css';
-import { Activity, Zap, Droplets, Bell, AlertTriangle, Clock } from 'lucide-react';
+import { Activity, Zap, Droplets, Bell, Clock } from 'lucide-react';
 
 const LeftPanel = () => {
-    // Custom Semi-Circle Gauge with Power Digits
+
     const EnergyGauge = ({ value = 3113, max = 15000 }) => {
         const percentage = (value / max) * 100;
         const formattedValue = String(value).padStart(5, '0');
-        // Calculate needle angle: 0% = -90deg (left), 100% = 90deg (right)
+
         const needleAngle = -90 + (percentage / 100) * 180;
 
         return (
             <div className="custom-gauge">
                 <svg viewBox="-10 -10 120 75" className="gauge-svg">
-                    {/* Background arc - semi circle */}
+
                     <path
                         d="M 5 50 A 45 45 0 0 1 95 50"
                         fill="none"
@@ -20,7 +20,7 @@ const LeftPanel = () => {
                         strokeWidth="8"
                         strokeLinecap="round"
                     />
-                    {/* Filled arc */}
+
                     <path
                         d="M 5 50 A 45 45 0 0 1 95 50"
                         fill="none"
@@ -30,7 +30,7 @@ const LeftPanel = () => {
                         strokeDasharray={`${(percentage / 100) * 141} 141`}
                         style={{ filter: 'drop-shadow(0 0 6px rgba(0, 212, 255, 0.8))' }}
                     />
-                    {/* Tick marks and scale labels */}
+
                     <line x1="5" y1="50" x2="12" y2="50" stroke="rgba(255,255,255,0.6)" strokeWidth="1.5" />
                     <text x="-8" y="54" fontSize="8" fill="rgba(255,255,255,0.9)">0</text>
 
@@ -45,7 +45,7 @@ const LeftPanel = () => {
 
                     <line x1="95" y1="50" x2="88" y2="50" stroke="rgba(255,255,255,0.6)" strokeWidth="1.5" />
                     <text x="98" y="54" fontSize="7" fill="rgba(255,255,255,0.9)">15K</text>
-                    {/* Needle */}
+
                     <g transform={`rotate(${needleAngle}, 50, 50)`}>
                         <polygon
                             points="50,12 47,50 50,48 53,50"
@@ -54,7 +54,7 @@ const LeftPanel = () => {
                         />
                         <circle cx="50" cy="50" r="4" fill="#00ffffff" />
                     </g>
-                    {/* Gradient */}
+
                     <defs>
                         <linearGradient id="gaugeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
                             <stop offset="0%" stopColor="#00d4ff" />
@@ -75,7 +75,7 @@ const LeftPanel = () => {
 
     return (
         <aside className="left-panel">
-            {/* Energy Consumption Card */}
+
             <div className="panel-card">
                 <div className="card-header">
                     <Activity className="card-icon" size={16} />
@@ -83,11 +83,11 @@ const LeftPanel = () => {
                 </div>
                 <div className="card-content energy-consumption">
                     <div className="energy-split">
-                        {/* Left - Custom Gauge */}
+
                         <div className="energy-gauge">
                             <EnergyGauge value={3113} max={15000} />
                         </div>
-                        {/* Right - Consumption Cards */}
+
                         <div className="energy-stats">
                             <div className="consumption-card">
                                 <Zap className="consumption-icon" size={14} />
@@ -105,7 +105,7 @@ const LeftPanel = () => {
                             </div>
                         </div>
                     </div>
-                    {/* Performance */}
+
                     <div className="performance-section">
                         <div className="perf-row">
                             <span className="perf-label">Performance</span>
@@ -121,7 +121,7 @@ const LeftPanel = () => {
                 </div>
             </div>
 
-            {/* Electrical System Card */}
+
             <div className="panel-card">
                 <div className="card-header">
                     <Zap className="card-icon" size={16} />
@@ -133,11 +133,11 @@ const LeftPanel = () => {
                             <span className="gauge-label">Transformer</span>
                             <div className="circular-gauge">
                                 <svg viewBox="0 0 60 60">
-                                    {/* Dashed outer circle */}
+
                                     <circle cx="30" cy="30" r="20" fill="none" stroke="rgba(0, 212, 255, 0.2)" strokeWidth="1" strokeDasharray="4 3" />
-                                    {/* Background circle */}
+
                                     <circle cx="30" cy="30" r="16" fill="none" stroke="rgba(0, 212, 255, 0.1)" strokeWidth="2.5" />
-                                    {/* Fill circle */}
+
                                     <circle cx="30" cy="30" r="16" fill="none" stroke="url(#gaugeGrad1)" strokeWidth="2.5" strokeLinecap="round" strokeDasharray="120" strokeDashoffset="0" transform="rotate(-90 30 30)" />
                                     <defs>
                                         <linearGradient id="gaugeGrad1">
@@ -155,9 +155,9 @@ const LeftPanel = () => {
                             <span className="gauge-label">Generator</span>
                             <div className="circular-gauge">
                                 <svg viewBox="0 0 60 60">
-                                    {/* Dashed outer circle */}
+
                                     <circle cx="30" cy="30" r="20" fill="none" stroke="rgba(0, 212, 255, 0.2)" strokeWidth="1" strokeDasharray="4 3" />
-                                    {/* Background circle only - empty gauge */}
+
                                     <circle cx="30" cy="30" r="16" fill="none" stroke="rgba(0, 212, 255, 0.1)" strokeWidth="2.5" />
                                 </svg>
                                 <div className="gauge-center">
@@ -169,11 +169,11 @@ const LeftPanel = () => {
                             <span className="gauge-label">ELE Panels</span>
                             <div className="circular-gauge">
                                 <svg viewBox="0 0 60 60">
-                                    {/* Dashed outer circle */}
+
                                     <circle cx="30" cy="30" r="20" fill="none" stroke="rgba(0, 212, 255, 0.2)" strokeWidth="1" strokeDasharray="4 3" />
-                                    {/* Background circle */}
+
                                     <circle cx="30" cy="30" r="16" fill="none" stroke="rgba(0, 212, 255, 0.1)" strokeWidth="2.5" />
-                                    {/* Fill circle - 92% */}
+
                                     <circle cx="30" cy="30" r="16" fill="none" stroke="url(#gaugeGrad3)" strokeWidth="2.5" strokeLinecap="round" strokeDasharray="120" strokeDashoffset="10" transform="rotate(-90 30 30)" />
                                     <defs>
                                         <linearGradient id="gaugeGrad3">
@@ -191,7 +191,7 @@ const LeftPanel = () => {
                 </div>
             </div>
 
-            {/* Pumps Status Card */}
+
             <div className="panel-card">
                 <div className="card-header">
                     <Droplets className="card-icon" size={16} />
@@ -200,13 +200,13 @@ const LeftPanel = () => {
                 <div className="card-content pumps-status">
                     <div className="pump-gauge">
                         <svg viewBox="0 0 80 80" className="pump-circle">
-                            {/* Outer dashed ring */}
+
                             <circle cx="40" cy="40" r="38" fill="none" stroke="rgba(0, 212, 255, 0.15)" strokeWidth="1" strokeDasharray="4 2" />
-                            {/* Second outer ring */}
+
                             <circle cx="40" cy="40" r="35" fill="none" stroke="rgba(0, 212, 255, 0.1)" strokeWidth="1" />
-                            {/* Background circle */}
+
                             <circle cx="40" cy="40" r="30" fill="none" stroke="rgba(0, 50, 80, 0.5)" strokeWidth="5" />
-                            {/* Fill circle */}
+
                             <circle cx="40" cy="40" r="30" fill="none" stroke="url(#pumpGrad)" strokeWidth="5" strokeLinecap="round" strokeDasharray="188" strokeDashoffset="0" transform="rotate(-90 40 40)" />
                             <defs>
                                 <linearGradient id="pumpGrad" gradientTransform="rotate(90)">
@@ -237,14 +237,14 @@ const LeftPanel = () => {
                 </div>
             </div>
 
-            {/* Notification Monitor Card */}
+
             <div className="panel-card">
                 <div className="card-header">
                     <Activity className="card-icon" size={16} />
                     <span>Notification Monitor</span>
                 </div>
                 <div className="card-content notifications">
-                    {/* Top Controls Row */}
+
                     <div className="notif-controls">
                         <div className="notif-badge-group">
                             <Bell className="bell-icon-yellow" size={16} />
@@ -260,7 +260,7 @@ const LeftPanel = () => {
                         </div>
                     </div>
 
-                    {/* Notification Item */}
+
                     <div className="notification-card-new">
                         <div className="notif-header-row">
                             <div className="notif-title-group">

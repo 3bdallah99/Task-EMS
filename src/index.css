@@ -80,7 +80,7 @@
 /* Landscape mode on phones - adjusted for readability */
 @media screen and (max-height: 500px) and (orientation: landscape) {
   .dashboard-wrapper:not(:has(.rotate-overlay[style*="display: flex"])) {
-    zoom: 0.55;
+    zoom: 0.62;
     /* Better readable zoom for landscape phones */
   }
 }

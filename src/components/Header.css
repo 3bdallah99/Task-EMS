@@ -1,0 +1,387 @@
+/* ===== HEADER MAIN ===== */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* ===== HEADER ROW - Main Layout ===== */
+.header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 50px;
+    background: linear-gradient(180deg,
+            rgba(15, 25, 50, 0.95) 0%,
+            rgba(20, 35, 70, 0.85) 60%,
+            rgba(20, 35, 70, 0.4) 85%,
+            transparent 100%);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    position: relative;
+}
+
+/* ===== LOGOS ===== */
+.header-logo {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+.header-logo-left {
+    min-width: 120px;
+}
+
+.header-logo-right {
+    min-width: 120px;
+    justify-content: flex-end;
+}
+
+/* EMS Logo - CSS Based */
+.ems-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ems-logo-icon {
+    color: var(--neon-blue);
+    filter: drop-shadow(0 0 6px var(--neon-blue-glow));
+}
+
+.ems-logo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ems-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 4px;
+    line-height: 1;
+}
+
+.ems-subtitle {
+    font-size: 5px;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    margin-top: 2px;
+}
+
+.siemens-text {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: #009999;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ===== NAV CONTAINER ===== */
+.header-nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    position: relative;
+    height: 100%;
+}
+
+/* ===== NAVIGATION ===== */
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.header-nav-left {
+    margin-right: 10px;
+}
+
+.header-nav-right {
+    margin-left: 10px;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 6px 12px;
+    background: transparent;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.nav-icon {
+    color: rgba(255, 255, 255, 0.6);
+    transition: all 0.2s ease;
+}
+
+.nav-label {
+    font-size: 9px;
+    color: rgba(255, 255, 255, 0.6);
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.nav-item:hover .nav-icon,
+.nav-item:hover .nav-label {
+    color: var(--neon-blue);
+}
+
+.nav-item.active {
+    background: rgba(0, 212, 255, 0.1);
+}
+
+.nav-item.active .nav-icon,
+.nav-item.active .nav-label {
+    color: var(--neon-blue);
+}
+
+.nav-item.active .nav-icon {
+    filter: drop-shadow(0 0 4px var(--neon-blue-glow));
+}
+
+/* ===== NOTCH WRAPPER ===== */
+.notch-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 180px;
+    height: 100%;
+}
+
+/* ===== STATION INFO (Inside Notch) ===== */
+.station-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 8px 20px;
+    margin-top: 35px;
+}
+
+.station-name {
+    font-family: 'Times New Roman', Times, Georgia, serif;
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 0.5px;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.station-subtitle {
+    font-size: 7px;
+    color: #ffd98f;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    margin: 2px 0 0 0;
+}
+
+/* ===== SHALLOW SVG BORDER WITH NOTCH ===== */
+.header-border-svg {
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    pointer-events: none;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1400px) {
+    .nav-item {
+        padding: 6px 10px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .nav-label {
+        display: none;
+    }
+
+    .nav-item {
+        padding: 6px;
+    }
+
+    .header-nav {
+        gap: 1px;
+    }
+
+    .station-name {
+        font-size: 12px;
+    }
+
+    .station-subtitle {
+        font-size: 7px;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .header-logo-left,
+    .header-logo-right {
+        min-width: auto;
+    }
+
+    .logo-subtitle {
+        display: none;
+    }
+
+    .siemens-text {
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+
+    .station-name {
+        font-size: 11px;
+    }
+
+    .station-subtitle {
+        font-size: 6px;
+    }
+
+    .notch-wrapper {
+        min-width: 140px;
+    }
+}
+
+/* ===== SUBHEADER INFO BAR ===== */
+.subheader-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 450px;
+    /* Narrower offset */
+    background: transparent;
+    /* No background - floating */
+}
+
+.subheader-left {
+    display: flex;
+    align-items: center;
+}
+
+.date-time-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 40, 60, 0.5);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    border-radius: 20px;
+    padding: 4px 12px;
+}
+
+.date-icon {
+    font-size: 12px;
+    color: var(--neon-blue);
+}
+
+.date-text,
+.time-text {
+    font-size: 10px;
+    color: var(--neon-blue);
+    font-weight: 500;
+}
+
+.time-divider {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 10px;
+}
+
+.subheader-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.actions-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 40, 60, 0.5);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    border-radius: 20px;
+    padding: 4px 12px;
+}
+
+.action-icon {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.action-icon.sun-icon {
+    color: #ffcc00;
+}
+
+.action-icon.moon-icon {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.action-icon:hover {
+    color: var(--neon-blue);
+}
+
+.actions-divider {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 10px;
+}
+
+.temp-icon {
+    font-size: 12px;
+    color: #ffaa00;
+    /* Yellow thermometer */
+}
+
+.temp-value {
+    font-size: 10px;
+    color: var(--neon-blue);
+    font-weight: 600;
+}
+
+.mic-btn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(0, 180, 120, 0.3), rgba(0, 150, 100, 0.2));
+    border: 1px solid rgba(0, 212, 150, 0.4);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.mic-btn:hover {
+    background: linear-gradient(135deg, rgba(0, 180, 120, 0.5), rgba(0, 150, 100, 0.3));
+    transform: scale(1.05);
+}
+
+.mic-icon {
+    font-size: 14px;
+}
+
+/* ===== SIEMENS LOGO ===== */
+.siemens-text {
+    font-family: 'Verdana', 'Geneva', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    color: #009999;
+    /* Siemens Teal */
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    text-shadow: none;
+}

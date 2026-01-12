@@ -66,7 +66,7 @@
 }
 
 .panel-card .card-header span {
-    font-size: 10px;
+    font-size: clamp(8px, 0.9vw, 10px);
     font-weight: 500;
     color: var(--white);
     letter-spacing: 0.8px;
@@ -138,14 +138,14 @@
 
 .power-digits .digit {
     font-family: 'Courier New', monospace;
-    font-size: 14px;
+    font-size: clamp(11px, 1.2vw, 14px);
     font-weight: 700;
     color: var(--neon-blue);
     text-shadow: 0 0 5px var(--neon-blue-glow);
 }
 
 .power-digits .unit {
-    font-size: 9px;
+    font-size: clamp(7px, 0.8vw, 9px);
     color: rgba(255, 255, 255, 0.6);
     margin-left: 3px;
 }
@@ -187,7 +187,7 @@
 }
 
 .consumption-label {
-    font-size: 7px;
+    font-size: clamp(5px, 0.6vw, 7px);
     color: var(--neon-blue);
     text-shadow: 0 0 5px var(--neon-blue-glow);
 }
@@ -207,7 +207,7 @@
 }
 
 .perf-label {
-    font-size: 7px;
+    font-size: clamp(5px, 0.6vw, 7px);
     color: rgba(255, 255, 255, 0.5);
     text-transform: uppercase;
     letter-spacing: 0.3px;
@@ -220,14 +220,14 @@
 }
 
 .perf-value {
-    font-size: 9px;
+    font-size: clamp(7px, 0.8vw, 9px);
     font-weight: 700;
     color: #00ff88;
     text-shadow: 0 0 5px rgba(0, 255, 136, 0.5);
 }
 
 .perf-status {
-    font-size: 7px;
+    font-size: clamp(5px, 0.6vw, 7px);
     color: rgba(0, 255, 234, 0.8);
     padding: 1px 4px;
     background: rgba(0, 255, 136, 0.1);
@@ -248,7 +248,7 @@
 }
 
 .consumption-value {
-    font-size: 10px;
+    font-size: clamp(8px, 0.9vw, 10px);
     font-weight: 600;
 }
 
@@ -261,12 +261,12 @@
 }
 
 .stat-label {
-    font-size: 9px;
+    font-size: clamp(7px, 0.8vw, 9px);
     color: rgba(255, 255, 255, 0.6);
 }
 
 .stat-value {
-    font-size: 10px;
+    font-size: clamp(8px, 0.9vw, 10px);
     font-weight: 600;
 }
 
@@ -285,7 +285,7 @@
 }
 
 .bar-label {
-    font-size: 8px;
+    font-size: clamp(6px, 0.7vw, 8px);
     color: rgba(255, 255, 255, 0.5);
 }
 
@@ -308,13 +308,13 @@
     position: absolute;
     top: -10px;
     transform: translateX(-50%);
-    font-size: 8px;
+    font-size: clamp(6px, 0.7vw, 8px);
     color: #00ff88;
     text-shadow: 0 0 5px rgba(0, 255, 136, 0.8);
 }
 
 .bar-value {
-    font-size: 8px;
+    font-size: clamp(6px, 0.7vw, 8px);
     color: #00ff88;
 }
 
@@ -357,7 +357,7 @@
 }
 
 .gauge-label {
-    font-size: 7px;
+    font-size: clamp(5px, 0.6vw, 7px);
     color: #00d4ff !important;
     text-shadow: 0 0 4px rgba(0, 212, 255, 0.5) !important;
     display: block;
@@ -413,14 +413,14 @@
 }
 
 .gauge-value .num {
-    font-size: 11px;
+    font-size: clamp(8px, 0.95vw, 11px);
     font-weight: 700;
     color: var(--neon-blue);
     text-shadow: 0 0 5px var(--neon-blue-glow);
 }
 
 .gauge-value .on {
-    font-size: 6px;
+    font-size: clamp(4px, 0.5vw, 6px);
     color: #00ff88;
     font-weight: 600;
     text-shadow: 0 0 3px rgba(0, 255, 136, 0.5);
@@ -433,7 +433,7 @@
 }
 
 .status-text {
-    font-size: 8px;
+    font-size: clamp(6px, 0.7vw, 8px);
     color: var(--neon-blue);
 }
 
@@ -468,7 +468,7 @@
 }
 
 .pump-number {
-    font-size: 22px;
+    font-size: clamp(16px, 2vw, 22px);
     font-weight: 700;
     color: var(--neon-blue);
     line-height: 1;
@@ -476,7 +476,7 @@
 }
 
 .pump-unit {
-    font-size: 10px;
+    font-size: clamp(8px, 0.9vw, 10px);
     color: #00ff88;
     font-weight: 600;
     text-shadow: 0 0 5px rgba(0, 255, 136, 0.5);
@@ -578,7 +578,7 @@
 
 .pump-stat .stat-label {
     color: #00d4ff;
-    font-size: 7px;
+    font-size: clamp(5px, 0.6vw, 7px);
     font-weight: 500;
     letter-spacing: 0.3px;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
@@ -586,7 +586,7 @@
 
 .pump-stat .stat-value {
     color: #00d4ff;
-    font-size: 6px;
+    font-size: clamp(4px, 0.5vw, 6px);
     font-weight: 600;
     letter-spacing: 0.4px;
     text-shadow: 0 0 6px rgba(0, 212, 255, 0.6), 0 1px 3px rgba(0, 0, 0, 0.5);
@@ -627,7 +627,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 2px;
-    font-size: 10px;
+    font-size: clamp(8px, 0.9vw, 10px);
     cursor: pointer;
 }
 
@@ -652,7 +652,7 @@
 .badge-count {
     background: rgba(255, 255, 255, 0.1);
     color: #fff;
-    font-size: 9px;
+    font-size: clamp(7px, 0.8vw, 9px);
     padding: 1px 4px;
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -663,7 +663,7 @@
     align-items: center;
     gap: 4px;
     color: rgba(255, 255, 255, 0.7);
-    font-size: 9px;
+    font-size: clamp(7px, 0.8vw, 9px);
 }
 
 .control-arrows {
@@ -681,7 +681,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 2px;
-    font-size: 8px;
+    font-size: clamp(6px, 0.7vw, 8px);
     cursor: pointer;
 }
 
@@ -719,18 +719,18 @@
 }
 
 .notif-title-text {
-    font-size: 10px;
+    font-size: clamp(8px, 0.9vw, 10px);
     font-weight: 700;
     color: #fff;
 }
 
 .notif-time-text {
-    font-size: 9px;
+    font-size: clamp(7px, 0.8vw, 9px);
     color: rgba(255, 255, 255, 0.7);
 }
 
 .notif-body-text {
-    font-size: 9px;
+    font-size: clamp(7px, 0.8vw, 9px);
     color: rgba(255, 255, 255, 0.8);
     padding-left: 12px;
 }
@@ -741,7 +741,7 @@
     border: 1px solid rgba(0, 212, 255, 0.15);
     border-radius: 4px;
     padding: 6px 8px;
-    font-size: 9px;
+    font-size: clamp(7px, 0.8vw, 9px);
     line-height: 1.4;
 }
 

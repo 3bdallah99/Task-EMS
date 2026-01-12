@@ -52,7 +52,7 @@
 }
 
 .counter-value {
-    font-size: 16px;
+    font-size: clamp(12px, 1.4vw, 16px);
     font-weight: 600;
     color: var(--neon-blue);
 }
@@ -68,13 +68,13 @@
 }
 
 .flow-stat .stat-label {
-    font-size: 8px;
+    font-size: clamp(6px, 0.7vw, 8px);
     color: var(--neon-blue);
     display: block;
 }
 
 .flow-stat .stat-value {
-    font-size: 9px;
+    font-size: clamp(7px, 0.8vw, 9px);
     color: rgba(255, 255, 255, 0.7);
 }
 
@@ -95,7 +95,7 @@
 }
 
 .gauge-label {
-    font-size: 8px;
+    font-size: clamp(6px, 0.7vw, 8px);
     color: rgba(255, 255, 255, 0.6);
     display: block;
     margin-bottom: 4px;
@@ -125,7 +125,7 @@
 }
 
 .gauge-percent {
-    font-size: 10px;
+    font-size: clamp(8px, 0.9vw, 10px);
     font-weight: 600;
     color: var(--white);
     margin-top: 4px;
@@ -193,7 +193,7 @@
 }
 
 .sump-word {
-    font-size: 6px;
+    font-size: clamp(4px, 0.5vw, 6px);
     /* Slightly larger for single line */
     font-weight: 700;
     text-transform: uppercase;
@@ -202,7 +202,7 @@
 }
 
 .sump-letter {
-    font-size: 8px;
+    font-size: clamp(6px, 0.7vw, 8px);
     /* Highlighting letter */
     font-weight: 700;
     text-transform: uppercase;
@@ -274,7 +274,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 8px;
+    font-size: clamp(6px, 0.7vw, 8px);
     /* Adjusted for smaller width */
     font-weight: 800;
     color: #fff;
@@ -303,7 +303,7 @@
 }
 
 .level-name {
-    font-size: 9px;
+    font-size: clamp(7px, 0.8vw, 9px);
     font-weight: 500;
     width: 40px;
 }
@@ -370,7 +370,7 @@
 
 
 .level-meter {
-    font-size: 9px;
+    font-size: clamp(7px, 0.8vw, 9px);
     font-weight: 600;
     width: 35px;
     text-align: right;
@@ -397,7 +397,7 @@
 }
 
 .level-meter {
-    font-size: 8px;
+    font-size: clamp(6px, 0.7vw, 8px);
     color: #fff;
     width: 30px;
     text-align: right;
@@ -431,7 +431,7 @@
 }
 
 .level-label {
-    font-size: 8px;
+    font-size: clamp(6px, 0.7vw, 8px);
     color: rgba(255, 255, 255, 0.6);
     width: 40px;
 }
@@ -455,7 +455,7 @@
 }
 
 .level-value {
-    font-size: 9px;
+    font-size: clamp(7px, 0.8vw, 9px);
     color: var(--white);
     width: 35px;
     text-align: right;
@@ -471,7 +471,7 @@
 
 .chart-btn {
     padding: 4px 10px;
-    font-size: 9px;
+    font-size: clamp(7px, 0.8vw, 9px);
     background: rgba(0, 212, 255, 0.2);
     border: 1px solid var(--neon-blue);
     border-radius: 4px;
@@ -485,7 +485,7 @@
 }
 
 .chart-value {
-    font-size: 11px;
+    font-size: clamp(8px, 0.95vw, 11px);
     font-weight: 600;
     color: var(--neon-blue);
 }
@@ -514,7 +514,7 @@
 }
 
 .maintenance-header span {
-    font-size: 7px;
+    font-size: clamp(5px, 0.6vw, 7px);
     color: rgba(255, 255, 255, 0.5);
     text-transform: uppercase;
 }
@@ -528,12 +528,12 @@
 }
 
 .maintenance-row span {
-    font-size: 8px;
+    font-size: clamp(6px, 0.7vw, 8px);
     color: rgba(255, 255, 255, 0.7);
 }
 
 .maintenance-row .status {
-    font-size: 7px;
+    font-size: clamp(5px, 0.6vw, 7px);
     padding: 2px 4px;
     border-radius: 3px;
 }
@@ -603,14 +603,14 @@
 
 .flow-digit {
     font-family: 'Courier New', monospace;
-    font-size: 14px;
+    font-size: clamp(11px, 1.2vw, 14px);
     font-weight: 700;
     color: var(--neon-blue);
     text-shadow: 0 0 5px var(--neon-blue-glow);
 }
 
 .flow-unit {
-    font-size: 8px;
+    font-size: clamp(6px, 0.7vw, 8px);
     color: rgba(255, 255, 255, 0.6);
     margin-left: 3px;
 }
@@ -639,7 +639,7 @@
 }
 
 .y-axis span {
-    font-size: 5px;
+    font-size: clamp(4px, 0.45vw, 5px);
     color: rgba(255, 255, 255, 0.5);
     line-height: 1;
 }
@@ -696,7 +696,7 @@
 }
 
 .x-axis span {
-    font-size: 5px;
+    font-size: clamp(4px, 0.45vw, 5px);
     color: rgba(255, 255, 255, 0.5);
     text-transform: capitalize;
 }
@@ -773,7 +773,7 @@
 }
 
 .flow-stat-label {
-    font-size: 7px;
+    font-size: clamp(5px, 0.6vw, 7px);
     color: var(--neon-blue);
     text-transform: uppercase;
     letter-spacing: 0.3px;
@@ -794,7 +794,7 @@
 }
 
 .flow-stat-value {
-    font-size: 9px;
+    font-size: clamp(7px, 0.8vw, 9px);
     font-weight: 600;
     color: #fff;
 }
@@ -823,7 +823,7 @@
     border: 1px solid rgba(0, 212, 255, 0.2);
     border-radius: 4px;
     color: rgba(255, 255, 255, 0.6);
-    font-size: 7px;
+    font-size: clamp(5px, 0.6vw, 7px);
     padding: 2px 6px;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -847,14 +847,14 @@
 }
 
 .consumption-monitor-right .monitor-value .value {
-    font-size: 12px;
+    font-size: clamp(9px, 1vw, 12px);
     font-weight: 700;
     color: var(--neon-blue);
     text-shadow: 0 0 8px var(--neon-blue-glow);
 }
 
 .consumption-monitor-right .monitor-value .unit {
-    font-size: 7px;
+    font-size: clamp(5px, 0.6vw, 7px);
     color: rgba(255, 255, 255, 0.6);
 }
 
@@ -912,7 +912,7 @@
 }
 
 .maintenance-header span {
-    font-size: 7px;
+    font-size: clamp(5px, 0.6vw, 7px);
     font-weight: 600;
     text-transform: uppercase;
     color: var(--neon-blue);
@@ -952,7 +952,7 @@
 }
 
 .maintenance-row span {
-    font-size: 7px;
+    font-size: clamp(5px, 0.6vw, 7px);
     color: rgba(255, 255, 255, 0.8);
     text-align: center;
 }
@@ -966,7 +966,7 @@
 .maintenance-row .status {
     padding: 2px 4px;
     border-radius: 2px;
-    font-size: 6px;
+    font-size: clamp(4px, 0.5vw, 6px);
     font-weight: 600;
     text-transform: uppercase;
     text-align: center;

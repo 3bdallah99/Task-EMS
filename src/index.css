@@ -46,6 +46,14 @@
   }
 }
 
+/* Landscape mode on phones - extra small to prevent crowding */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .dashboard-wrapper:not(:has(.rotate-overlay[style*="display: flex"])) {
+    zoom: 0.28;
+    /* Extra small for landscape phones */
+  }
+}
+
 /* ===== RESET & BASE ===== */
 * {
   margin: 0;

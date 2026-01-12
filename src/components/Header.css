@@ -59,7 +59,7 @@
 }
 
 .ems-title {
-    font-size: 22px;
+    font-size: clamp(16px, 2vw, 22px);
     font-weight: 700;
     color: var(--white);
     letter-spacing: 4px;
@@ -67,7 +67,7 @@
 }
 
 .ems-subtitle {
-    font-size: 5px;
+    font-size: clamp(4px, 0.5vw, 5px);
     color: rgba(255, 255, 255, 0.4);
     letter-spacing: 0.3px;
     text-transform: uppercase;
@@ -75,7 +75,7 @@
 }
 
 .siemens-text {
-    font-size: 20px;
+    font-size: clamp(14px, 1.8vw, 20px);
     font-weight: 400;
     letter-spacing: 3px;
     color: #009999;
@@ -126,7 +126,7 @@
 }
 
 .nav-label {
-    font-size: 9px;
+    font-size: clamp(7px, 0.8vw, 9px);
     color: rgba(255, 255, 255, 0.6);
     transition: all 0.2s ease;
     white-space: nowrap;
@@ -173,7 +173,7 @@
 
 .station-name {
     font-family: 'Times New Roman', Times, Georgia, serif;
-    font-size: 19px;
+    font-size: clamp(14px, 1.6vw, 19px);
     font-weight: 700;
     color: var(--white);
     letter-spacing: 0.5px;
@@ -182,7 +182,7 @@
 }
 
 .station-subtitle {
-    font-size: 7px;
+    font-size: clamp(5px, 0.6vw, 7px);
     color: #ffd98f;
     letter-spacing: 0.6px;
     text-transform: uppercase;
@@ -220,11 +220,11 @@
     }
 
     .station-name {
-        font-size: 12px;
+        font-size: clamp(9px, 1vw, 12px);
     }
 
     .station-subtitle {
-        font-size: 7px;
+        font-size: clamp(5px, 0.6vw, 7px);
     }
 }
 
@@ -240,16 +240,16 @@
     }
 
     .siemens-text {
-        font-size: 16px;
+        font-size: clamp(12px, 1.4vw, 16px);
         letter-spacing: 2px;
     }
 
     .station-name {
-        font-size: 11px;
+        font-size: clamp(8px, 0.9vw, 11px);
     }
 
     .station-subtitle {
-        font-size: 6px;
+        font-size: clamp(4px, 0.5vw, 6px);
     }
 
     .notch-wrapper {
@@ -284,20 +284,20 @@
 }
 
 .date-icon {
-    font-size: 12px;
+    font-size: clamp(10px, 1vw, 12px);
     color: var(--neon-blue);
 }
 
 .date-text,
 .time-text {
-    font-size: 10px;
+    font-size: clamp(8px, 0.9vw, 10px);
     color: var(--neon-blue);
     font-weight: 500;
 }
 
 .time-divider {
     color: rgba(255, 255, 255, 0.3);
-    font-size: 10px;
+    font-size: clamp(8px, 0.9vw, 10px);
 }
 
 .subheader-right {
@@ -317,7 +317,7 @@
 }
 
 .action-icon {
-    font-size: 12px;
+    font-size: clamp(10px, 1vw, 12px);
     color: rgba(255, 255, 255, 0.7);
     cursor: pointer;
     transition: all 0.2s ease;
@@ -337,17 +337,17 @@
 
 .actions-divider {
     color: rgba(255, 255, 255, 0.3);
-    font-size: 10px;
+    font-size: clamp(8px, 0.9vw, 10px);
 }
 
 .temp-icon {
-    font-size: 12px;
+    font-size: clamp(10px, 1vw, 12px);
     color: #ffaa00;
     /* Yellow thermometer */
 }
 
 .temp-value {
-    font-size: 10px;
+    font-size: clamp(8px, 0.9vw, 10px);
     color: var(--neon-blue);
     font-weight: 600;
 }
@@ -371,13 +371,13 @@
 }
 
 .mic-icon {
-    font-size: 14px;
+    font-size: clamp(11px, 1.2vw, 14px);
 }
 
 /* ===== SIEMENS LOGO ===== */
 .siemens-text {
     font-family: 'Verdana', 'Geneva', sans-serif;
-    font-size: 22px;
+    font-size: clamp(16px, 2vw, 22px);
     font-weight: 800;
     color: #009999;
     /* Siemens Teal */

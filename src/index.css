@@ -27,10 +27,22 @@
 
 @media screen and (max-width: 1024px) {
   .dashboard-wrapper:not(:has(.rotate-overlay[style*="display: flex"])) {
-    /* Only zoom if not in rotate mode, though wrapper hides anyway. 
-       Simpler: just zoom the wrapper. */
     zoom: 0.6;
-    /* Game Scale for Mobile */
+    /* Scale for smaller tablets */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dashboard-wrapper:not(:has(.rotate-overlay[style*="display: flex"])) {
+    zoom: 0.45;
+    /* Scale for large phones */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .dashboard-wrapper:not(:has(.rotate-overlay[style*="display: flex"])) {
+    zoom: 0.35;
+    /* Scale for small phones */
   }
 }
 

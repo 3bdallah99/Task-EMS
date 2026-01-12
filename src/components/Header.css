@@ -385,3 +385,23 @@
     text-transform: uppercase;
     text-shadow: none;
 }
+
+/* ===== SMALL SCREEN FIX ===== */
+@media screen and (max-width: 1000px) {
+    .subheader-bar {
+        padding: 10px 380px !important;
+        /* Almost original spacing */
+    }
+
+    .date-time-box,
+    .actions-box {
+        transform: scale(0.75) !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .subheader-bar {
+        visibility: hidden !important;
+        opacity: 0 !important;
+    }
+}
